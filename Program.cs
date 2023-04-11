@@ -1,7 +1,10 @@
+using rent.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient(typeof(IData), typeof(Data));
 
 var app = builder.Build();
 

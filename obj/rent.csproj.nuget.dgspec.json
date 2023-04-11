@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rebec\\source\\repos\\rent\\rent.csproj": {}
+    "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\rent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rebec\\source\\repos\\rent\\rent.csproj": {
+    "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\rent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rebec\\source\\repos\\rent\\rent.csproj",
+        "projectUniqueName": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\rent.csproj",
         "projectName": "rent",
-        "projectPath": "C:\\Users\\rebec\\source\\repos\\rent\\rent.csproj",
+        "projectPath": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\rent.csproj",
         "packagesPath": "C:\\Users\\rebec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rebec\\source\\repos\\rent\\obj\\",
+        "outputPath": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rebec\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Data.OleDb": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,3 +16,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+.validation-summary-errors{
+    color: #dc3545;
+}
+.input-validation-error {
+    border-color: #dc3545;
+}
