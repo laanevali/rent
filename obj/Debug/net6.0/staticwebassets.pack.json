@@ -25,6 +25,38 @@
       "PackagePath": "staticwebassets\\images\\carousel\\toyota.jpg"
     },
     {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\2d2ff06f-97f9-415e-9e22-ac2fbf144e1d_toyota.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\2d2ff06f-97f9-415e-9e22-ac2fbf144e1d_toyota.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\36e17081-e1a5-4060-9f45-8a7a0794a5b4_opel-za-corsa-enjoy-120y-special-edition-884x664.webp",
+      "PackagePath": "staticwebassets\\images\\cars\\36e17081-e1a5-4060-9f45-8a7a0794a5b4_opel-za-corsa-enjoy-120y-special-edition-884x664.webp"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\45cace61-10e2-498d-bf94-f740c58a4c1d_toyota_corolla.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\45cace61-10e2-498d-bf94-f740c58a4c1d_toyota_corolla.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\4e459b6d-8fae-4cb6-b449-2b91538d621a_opgefriste-renault-trafic-2020-970-005.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\4e459b6d-8fae-4cb6-b449-2b91538d621a_opgefriste-renault-trafic-2020-970-005.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\61824085-0036-40bf-8312-e150850b2c83_toyota.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\61824085-0036-40bf-8312-e150850b2c83_toyota.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\9b375f1b-f9de-40f3-845e-3652efe4ca79_1-Skoda-Kodiaq.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\9b375f1b-f9de-40f3-845e-3652efe4ca79_1-Skoda-Kodiaq.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\bcced5ec-cf8e-4e2b-a9fa-a736838bb974_opgefriste-renault-trafic-2020-970-005.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\bcced5ec-cf8e-4e2b-a9fa-a736838bb974_opgefriste-renault-trafic-2020-970-005.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\cars\\f5c68ba7-1c14-43c5-9bba-f6cf3b9b67c8_opgefriste-renault-trafic-2020-970-005.jpeg",
+      "PackagePath": "staticwebassets\\images\\cars\\f5c68ba7-1c14-43c5-9bba-f6cf3b9b67c8_opgefriste-renault-trafic-2020-970-005.jpeg"
+    },
+    {
       "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

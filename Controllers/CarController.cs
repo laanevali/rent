@@ -15,7 +15,8 @@ namespace rent.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var list = data.GetAllCars();
+            return View(list);
         }
         public IActionResult Add()
         {
@@ -29,6 +30,7 @@ namespace rent.Controllers
             bool isSaved = data.AddNewCar(newcar);
             ViewBag.isSaved = isSaved;
             ModelState.Clear();
+
             return View();
         }
     }

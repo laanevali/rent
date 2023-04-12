@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<rent.Models.Car>
 @{
     ViewData["Title"] = "Car";
 }
@@ -13,7 +13,7 @@
                 </div>
                 <div class="p-3">
                     <table class="table table-responsive table-bordered text-black text-black text-center">
-                        <thead>
+                        <thead class="text-info">
                             <tr>
                                 <th>Id</th>
                                 <th>Brand</th>
@@ -25,6 +25,21 @@
                                 <th>Car Number</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Brand</td>
+                                    <td>@item.Model</td>
+                                    <td>@item.SeatingCapacity</td>
+                                    <td>@item.Engine</td>
+                                    <td>@item.FuelType</td>
+                                    <td>@item.PassingYear</td>
+                                    <td>@item.CarNumber</td>
+                                </tr>
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>

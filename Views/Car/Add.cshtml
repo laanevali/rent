@@ -78,3 +78,14 @@
         </div>
     </div>
 </div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    function showAlert(){
+        if ('@ViewBag.isSaved' == 'True'){
+            alert("New Car Successfully added!");
+        } 
+    }
+    $(document).ready(function (){
+        showAlert();
+    })
+</script>

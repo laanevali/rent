@@ -17,6 +17,57 @@ namespace rent.Repository
             this.webhost = webhost;
         }
         [SupportedOSPlatform("windows")]
+        public List<Car> GetAllCars()
+        {
+            List<Car> cars = new List<Car>();
+            Car car;
+            OleDbConnection con = GetOleDbConnection();
+            try
+            {
+                con.Open();
+                string qry = "Select * from Cars";
+                OleDbDataReader reader = GetData(qry, con);
+                while (reader.Read())
+                {
+                    car = new Car();
+                    car.Id = int.Parse(reader["ID"].ToString());
+                    car.Brand = reader["Brand"].ToString();
+                    car.Model = reader["Model"].ToString();
+                    car.PassingYear = int.Parse(reader["PassingYear"].ToString());
+                    car.Engine = reader["Engine"].ToString();
+                    car.FuelType = reader["FuelType"].ToString();
+                    car.ImagePath = reader["ImagePath"].ToString();
+                    car.CarNumber = reader["CarNumber"].ToString();
+                    car.SeatingCapacity = int.Parse(reader["SeatingCapacity"].ToString());
+                    cars.Add(car);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return cars;
+        }
+        [SupportedOSPlatform("windows")]
+        private OleDbDataReader GetData(string qry, OleDbConnection con)
+        {
+            OleDbDataReader reader = null;
+            try
+            {
+                OleDbCommand cmd = new OleDbCommand(qry, con);
+                reader = cmd.ExecuteReader();   
+            }
+            catch (Exception) 
+            { 
+                throw; 
+            }
+            return reader;
+        }
+        [SupportedOSPlatform("windows")]
         public bool AddNewCar(Car newcar)
         {
             bool isSaved = false;
