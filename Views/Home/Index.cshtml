@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<rent.Models.Car>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -19,5 +20,24 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div></div>
+    <div class="row mt-3">
+        @foreach (var item in Model.ToList())
+        {
+            <div class="col-4">
+                <div class="mt-2 p-3 shadow rounded">
+                    <div class="card" style="height:400px">
+                        <img src="~/images/cars/@item.ImagePath" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="text-info">@item.Brand @item.Model</h5>
+                            <p class="card-text">Engine @item.Engine</p>
+                            <p class="card-text">Fuel Type @item.FuelType</p>
+                            <p class="card-text">Seating Capacity @item.SeatingCapacity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>

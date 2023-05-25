@@ -1,21 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using rent.Models;
 using System.Diagnostics;
+using rent.Repository;
 
 namespace rent.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IData data;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IData data)
         {
             _logger = logger;
+            this.data = data;   
         }
 
         public IActionResult Index()
         {
-            return View();
+            var list = data.GetAllCars();
+            return View(list);
         }
 
         public IActionResult Privacy()

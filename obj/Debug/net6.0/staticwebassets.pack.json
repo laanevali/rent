@@ -57,6 +57,14 @@
       "PackagePath": "staticwebassets\\images\\cars\\f5c68ba7-1c14-43c5-9bba-f6cf3b9b67c8_opgefriste-renault-trafic-2020-970-005.jpeg"
     },
     {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\drivers\\093b61e0-ee6c-416c-97f7-f95f4b0f5379_drivers license.jpg",
+      "PackagePath": "staticwebassets\\images\\drivers\\093b61e0-ee6c-416c-97f7-f95f4b0f5379_drivers license.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\drivers\\b3a9e5b1-8316-4c69-a20c-20b3afab4195_drivers license.jpg",
+      "PackagePath": "staticwebassets\\images\\drivers\\b3a9e5b1-8316-4c69-a20c-20b3afab4195_drivers license.jpg"
+    },
+    {
       "Id": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

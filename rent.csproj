@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\cars\" />
+    <Folder Include="wwwroot\images\drivers\" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OQPNq9Umd90/6uv4/tuWRK5tM47/vwcnJpDW5D5ptT8=",
+  "Hash": "D4D0MaZB/ZFQ4UhRVKFGJ/WzyGuDdrrws8bQtJYG2Yw=",
   "Source": "rent",
   "BasePath": "_content/rent",
   "Mode": "Default",
@@ -270,6 +270,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\cars\\f5c68ba7-1c14-43c5-9bba-f6cf3b9b67c8_opgefriste-renault-trafic-2020-970-005.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\drivers\\093b61e0-ee6c-416c-97f7-f95f4b0f5379_drivers license.jpg",
+      "SourceId": "rent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\",
+      "BasePath": "_content/rent",
+      "RelativePath": "images/drivers/093b61e0-ee6c-416c-97f7-f95f4b0f5379_drivers license.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\drivers\\093b61e0-ee6c-416c-97f7-f95f4b0f5379_drivers license.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\images\\drivers\\b3a9e5b1-8316-4c69-a20c-20b3afab4195_drivers license.jpg",
+      "SourceId": "rent",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\",
+      "BasePath": "_content/rent",
+      "RelativePath": "images/drivers/b3a9e5b1-8316-4c69-a20c-20b3afab4195_drivers license.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\drivers\\b3a9e5b1-8316-4c69-a20c-20b3afab4195_drivers license.jpg"
     },
     {
       "Identity": "C:\\Users\\rebec\\OneDrive\\Documents\\GitHub\\rent\\wwwroot\\js\\site.js",

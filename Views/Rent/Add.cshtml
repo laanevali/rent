@@ -1,0 +1,186 @@
+﻿@model rent.Models.Rent
+@{
+    ViewData["Title"] = "Booking Now";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="mt-3 p-2 shadow rounded">
+                <div class="text-center border-bottom">
+                    <h2 class="text-black">Booking Now</h2>
+                </div>
+                <div>
+                    @Html.ValidationSummary()
+                </div>
+                <div class="p-3">
+                    <form action="/Rent/Add" method="post" autocomplete="off">
+                            <div id="locationDetails">
+                                <div class="mb-3">
+                                    <h5 class="text-info">Location Info</h5>
+                                </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-table text-black">PickUp</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.PickUp, new{@class="form-control", placeholder = "Enter PickUp"})
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-table text-black">DropOff</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.DropOff, new{@class="form-control", placeholder = "Enter DropOff"})
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-table text-black">PickUp Date</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.PickUpDate, new{@class="form-control",type="datetime-local"})
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-table text-black">DropOff Date</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.DropOffDate, new{@class="form-control",type="datetime-local"})
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-table text-black">Total Run</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.TotalRun, new{@class="form-control",placeholder="Enter Total Run (in km)"})
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-table text-black">Rate</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.Rate, new{@class="form-control",placeholder="Enter Rate(in KM)"})
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-sm btn-primary p-2" type="button" onclick="showCarDetails()">Next</button>
+                            </div>
+                        </div>
+                        <div id="cardetails" style="display:none;">
+                            <div class="mb-3">
+                                <h5 class="text-info">Car Details</h5>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-label text-black">Brand</label>
+                                <div class="col-9">
+                                    <select id="brandddl" name="Brand" class="form-select">
+                                        <option>Select Brand</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-label text-black">Model</label>
+                                <div class="col-9">
+                                    <select id="modelddl" name="Model" class="form-select">
+                                        <option>Select Model</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-label text-black">Driver</label>
+                                <div class="col-9">
+                                    <select id="driverddl" name="DriverId" class="form-select">
+                                        <option>Select Driver</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-label text-black">Customer Name</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.CustomerName, new{@class="form-control", placeholder="Enter Customer Name"})
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label class="col-3 col-form-label text-black">Customer Contact</label>
+                                <div class="col-9">
+                                    @Html.TextBoxFor(m => m.CustomerContact, new{@class="form-control", placeholder="Enter Customer Contact"})
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-sm p-2 btn-primary" type="button"
+                                onclick="showLocationDetails()">Previous</button>
+                                <button class="btn btn-sm p-2 btn-dark" type="reset">Clear</button>
+                                <button class="btn btn-sm p-2 btn-success" type="submit">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    function showCarDetails(){
+        $('#cardetails').show();
+        $('#locationDetails').hide();
+    }  
+    function showLocationDetails(){
+        $('#locationDetails').show();
+        $('#cardetails').hide();
+    }
+    function getBrand(){
+        $.ajax({
+            url: '/Rent/GetBrand',
+            success: function (data){
+                let options = "";
+                for(let item of data){
+                    options+= `<option value=${item}>${item}</option>`;
+                }
+                $('#brandddl').append(options);
+            },
+            error: function(err){
+                alert(err);
+            }
+        })
+    }
+    function getModel(brand) {
+        $.ajax({
+            url: '/Rent/GetModel?brand=' + brand,
+            type: 'get',
+            success: function(data) {
+                let optins ="<option>Select Model</option>";
+                for (let item of data) {
+                    optins += `<option value=${item}>${item}</option>`;
+                }
+                $('#modelddl').empty();
+                $('#modelddl').append(optins);
+            },
+            error: function (err){
+                alert(err)
+            }
+        })
+    }
+    function getDriver(){
+        $.ajax({
+            url: '/Rent/GetDriver',
+            type: 'get',
+            success: function (data){
+                let options = "";
+                for (let item of data){
+                    options+=`<option value=${item.id}>${item.name}</option>`;
+                }
+                $('#driverddl').append(options);
+            },
+            error: function(err){
+                alert(err);
+            }
+        })
+    }
+    function showAlert(){
+        if('@ViewBag.isSaved' == 'True'){
+            alert("Booked successfully");
+        }
+    }
+    $(document).ready(function (){
+        showAlert();
+        getBrand();
+        getDriver();
+        $('#brandddl').change(function (e){
+            getModel(e.target.value);
+        })
+    })
+
+</script>

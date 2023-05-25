@@ -1,5 +1,45 @@
-﻿
+﻿@model IEnumerable<rent.Models.Driver>
 @{
     ViewData["Title"] = "Driver";
 }
-<h2>Driver Page</h2>
+<div class="container">
+    <div class="row">
+        <div class="mt-3 p-3 shadow rounded">
+            <div class="d-flex justify-content-between mb-3 p-3">
+                <h3 class="text-black">Driver List</h3>
+                @Html.ActionLink("Add Driver", "Add", "Driver", null, new {@class="btn btn-sm btn-primary"})
+            </div>
+            <div class="p-3">
+                <table class="table table-responsive table-bordered text-center">
+                    <thead class="text-info">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Age</th>
+                            <th>Experince</th>
+                            <th>Mobile Number</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.Address</td>
+                                <td>@item.Age</td>
+                                <td>@item.Experince</td>
+                                <td>@item.MobileNo</td>
+                                <td>
+                                    @Html.ActionLink("History","History","Driver", new{Id=item.Id},new{@class="nav-link text-info"})
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
